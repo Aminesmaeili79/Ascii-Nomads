@@ -83,7 +83,9 @@ nav a:hover {
 
 .ascii-nomads b {
 	font-size: 2rem;
-	font-weight: 300;
+	font-weight: 400;
+	display: inline-block;
+	margin-top: -0.6rem;
 }
 
 .hero {
@@ -277,7 +279,8 @@ footer h1 {
 
 .cards {
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
+	grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+	grid-gap: 1rem;
 	grid-template-rows: repeat(3, auto);
 	gap: 4rem;
 	padding: 0 4rem;
@@ -823,7 +826,9 @@ form button:focus {
 		font-size: 30%;
 	}
 	.ascii-nomads b {
+		display: inline-block;
 		font-size: 1.4rem;
+		margin-top: -16rem;
 	}
 
 	.checklist b,
@@ -851,11 +856,15 @@ form button:focus {
 	}
 
 	.ascii-nomads b {
+		display: inline-block;
 		font-size: 1rem;
+		margin: -160rem 0;
 	}
 
 	.checklist b,
 	.lockandkey b {
+		display: inline-block;
+		margin-top: -16rem;
 		font-size: 1.2rem;
 	}
 }
