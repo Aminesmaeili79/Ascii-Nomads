@@ -81,11 +81,15 @@ nav a:hover {
 	/* height: 100vh; */
 }
 
-.ascii-nomads b {
+.ascii-nomads pre {
 	font-size: 2rem;
+}
+
+.ascii-nomads b {
+	/* font-size: 2rem; */
 	font-weight: 400;
 	display: inline-block;
-	margin-top: -0.6rem;
+	margin-top: -1.6rem;
 }
 
 .hero {
@@ -100,7 +104,7 @@ nav a:hover {
 .buttons {
 	margin-top: 4rem;
 	display: flex;
-	gap: 10rem;
+	gap: 6rem;
 }
 
 button:hover {
@@ -153,8 +157,13 @@ button:active {
 .checklist b,
 .lockandkey,
 .lockandkey b {
-	font-size: 1rem;
+	/* font-size: 1rem; */
 	font-weight: 300;
+}
+
+.checklist pre,
+.lockandkey pre {
+	font-size: 1rem;
 }
 
 .section {
@@ -162,7 +171,7 @@ button:active {
 	flex-direction: column;
 	gap: 4rem;
 	padding: 0 10rem;
-	margin-top: 28rem;
+	margin-top: 18rem;
 	font-size: 2.8rem;
 	font-weight: 300;
 }
@@ -200,13 +209,13 @@ button:active {
 	scroll-behavior: smooth;
 
 	border: 1px solid #e3e3e3;
-	padding: 0 0 4rem 0;
+	padding: 0 0 6rem 0;
 }
 
 .slider div {
 	flex: 1 0 100%;
 	scroll-snap-align: start;
-	padding: 3rem;
+	padding: 3rem 3rem 0 3rem;
 	text-align: center;
 }
 
@@ -279,9 +288,9 @@ footer h1 {
 
 .cards {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-	grid-gap: 1rem;
-	grid-template-rows: repeat(3, auto);
+	grid-template-columns: repeat(auto-fit, minmax(320px, 2fr));
+	/* grid-template-columns: repeat(4, 1fr); */
+	/* grid-gap: 1rem; */
 	gap: 4rem;
 	padding: 0 4rem;
 	margin-top: 4rem;
@@ -293,7 +302,7 @@ footer h1 {
 	border: 1px solid #e3e3e3;
 	display: grid;
 	grid-template-rows: subgrid;
-	grid-row: 1/-1;
+	grid-row: span 3;
 	gap: 3rem;
 	transition: all ease 0.2s;
 }
@@ -330,6 +339,7 @@ footer h1 {
 
 .more-about-us .items {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
 	gap: 2rem;
 }
@@ -371,11 +381,11 @@ footer h1 {
 .options div {
 	display: flex;
 	flex-direction: column;
+	justify-content: space-evenly;
 	align-items: center;
 	text-align: center;
-	gap: 1rem;
 	flex: 1 0 100%;
-	padding: 6rem 10rem;
+	padding: 2rem 6rem;
 	font-size: 2.8rem;
 	border: 1px solid #e3e3e3;
 	scroll-snap-align: start;
@@ -397,9 +407,10 @@ footer h1 {
 .progress {
 	display: grid;
 	column-gap: 4rem;
-	grid-template-columns: 2fr 1fr;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	row-gap: 2rem;
 	margin-top: 20rem;
-	padding: 12rem 6rem;
+	padding: 6rem 2rem;
 	background: linear-gradient(
 		45deg,
 		rgba(7, 115, 60, 1) 0%,
@@ -420,7 +431,7 @@ footer h1 {
 	font-size: 2.8rem;
 	font-weight: 400;
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 	column-gap: 1rem;
 	row-gap: 3rem;
 }
@@ -456,22 +467,22 @@ footer h1 {
 }
 
 .member-cards {
-	padding: 0 20rem;
 	width: 100%;
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	justify-items: center;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 	row-gap: 6rem;
 	column-gap: 4rem;
 }
 
 .member-card {
 	display: flex;
+	max-width: 70%;
 	flex-direction: column;
 	align-items: center;
 	gap: 1.6rem;
-
 	border: 1px solid #e3e3e3;
-	padding: 3rem 0;
+	padding: 3rem 6rem;
 	transition: all ease 0.2s;
 }
 
@@ -494,6 +505,17 @@ footer h1 {
 .member-card h4 {
 	font-size: 2.8rem;
 	font-weight: 300;
+	text-align: center;
+}
+
+.ascii-img b {
+	display: inline-block;
+	/* margin-top: -16rem; */
+	/* font-size: 0.1rem; */
+}
+
+.ascii-img pre {
+	font-size: 0.3rem;
 }
 
 .social-links {
@@ -791,15 +813,15 @@ form button:focus {
 
 @media (max-width: 1440px) {
 	html {
-		font-size: 50%;
+		font-size: 62.5%;
 	}
-	.ascii-nomads b {
-		font-size: 1.6rem;
+	.ascii-nomads pre {
+		font-size: 1.2rem;
 	}
 
-	.checklist b,
-	.lockandkey b {
-		font-size: 0.8rem;
+	.checklist pre,
+	.lockandkey pre {
+		font-size: 0.6rem;
 	}
 
 	.text {
@@ -811,35 +833,34 @@ form button:focus {
 	html {
 		font-size: 50%;
 	}
-	.ascii-nomads b {
+	.ascii-nomads pre {
 		font-size: 1.4rem;
 	}
 
-	.checklist b,
-	.lockandkey b {
+	.checklist pre,
+	.lockandkey pre {
 		font-size: 0.6rem;
 	}
 }
 
 @media (max-width: 840px) {
 	html {
-		font-size: 30%;
+		font-size: 50%;
 	}
-	.ascii-nomads b {
+	.ascii-nomads pre {
 		display: inline-block;
-		font-size: 1.4rem;
-		margin-top: -16rem;
+		font-size: 0.9rem;
 	}
 
-	.checklist b,
-	.lockandkey b {
-		font-size: 0.6rem;
+	.checklist pre,
+	.lockandkey pre {
+		font-size: 0.4rem;
 	}
 }
 
 @media (max-width: 520px) {
 	html {
-		font-size: 25%;
+		font-size: 40%;
 	}
 
 	.descriptions {
@@ -847,7 +868,7 @@ form button:focus {
 		padding: 0 4rem;
 	}
 
-	.descriptions button {
+	.descriptions preutton {
 		order: 5;
 	}
 
@@ -855,34 +876,30 @@ form button:focus {
 		order: 4;
 	}
 
-	.ascii-nomads b {
+	.ascii-nomads pre {
 		display: inline-block;
-		font-size: 1rem;
-		margin: -160rem 0;
+		font-size: 0.6rem;
+		font-weight: 500;
 	}
 
-	.checklist b,
-	.lockandkey b {
+	.checklist pre,
+	.lockandkey pre {
 		display: inline-block;
-		margin-top: -16rem;
-		font-size: 1.2rem;
+		font-weight: 500;
+		font-size: 0.6rem;
 	}
 }
 
 @media (max-width: 375px) {
-	.checklist b,
-	.lockandkey b {
-		font-size: 1rem;
+	.checklist pre,
+	.lockandkey pre {
+		font-size: 0.5rem;
 	}
 }
 
 @media (max-width: 320px) {
-	html {
-		/* font-size: 20%; */
-	}
-
-	.checklist b,
-	.lockandkey b {
+	.checklist pre,
+	.lockandkey pre {
 		font-size: 0.8rem;
 	}
 }
